@@ -63,6 +63,16 @@ public class UIActivator : MonoBehaviour
         {
             logIn.SetActive(false);
             logInActive = false;
+			menu.SetActive(true);
+			menuActive = true;
+			toMap.SetActive(false);
+			mapActive = false;
+			triviaActive = false;
+			trivia.SetActive(false);
+			aboutActive = false;
+			about.SetActive(false);
+			logInActive = false;
+			logIn.SetActive(false);
         }
     }
     public void AboutVar()

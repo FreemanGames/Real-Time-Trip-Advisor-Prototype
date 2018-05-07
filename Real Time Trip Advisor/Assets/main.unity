@@ -179,7 +179,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 234572835}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -2934,7 +2934,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 180915005}
-        m_MethodName: MenuVar
+        m_MethodName: LogInVar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
