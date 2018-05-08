@@ -8,13 +8,45 @@ public class UIActivator : MonoBehaviour
     public GameObject trivia;
     public GameObject logIn;
     public GameObject about;
+    public GameObject landmarks;
 
 
     private bool menuActive = false;
     private bool triviaActive = false;
     private bool logInActive = false;
     private bool aboutActive = false;
+    private bool landmarksActive = false;
 
+
+    public void LandMarks()
+    {
+        if (!landmarksActive && !triviaActive && !aboutActive)
+        {
+            landmarks.SetActive(true);
+            landmarksActive = true;
+        }
+        if (landmarksActive)
+        {
+            landmarks.SetActive(false);
+            landmarksActive = false;
+            triviaActive = false;
+            trivia.SetActive(false);
+            aboutActive = false;
+            trivia.SetActive(false);
+        }
+
+        if (triviaActive)
+        {
+            triviaActive = false;
+            trivia.SetActive(false);
+        }
+
+        if (aboutActive)
+        {
+            aboutActive = false;
+            trivia.SetActive(false);
+        }
+    }
 
     //Used for toggling the settings menu on and off
     public void MenuVar()
