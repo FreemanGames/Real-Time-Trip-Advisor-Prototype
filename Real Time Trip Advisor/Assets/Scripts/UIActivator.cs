@@ -8,42 +8,21 @@ public class UIActivator : MonoBehaviour
     public GameObject trivia;
     public GameObject logIn;
     public GameObject about;
-    public GameObject toMap;
+
+
     private bool menuActive = false;
     private bool triviaActive = false;
     private bool logInActive = false;
     private bool aboutActive = false;
-    private bool mapActive = true;
-    public void MapVar()
-    {
-        if (mapActive)
-        {
-            toMap.SetActive(false);
-            mapActive = false;
-        }
-        else
-        {
-            toMap.SetActive(true);
-            mapActive = true;
-            menu.SetActive(false);
-            menuActive = false;
-            menu.SetActive(false);
-        }
-    }
+
+
+    //Used for toggling the settings menu on and off
     public void MenuVar()
     {
         if (!menuActive)
         {
             menu.SetActive(true);
             menuActive = true;
-            toMap.SetActive(false);
-            mapActive = false;
-            triviaActive = false;
-            trivia.SetActive(false);
-            aboutActive = false;
-            about.SetActive(false);
-            logInActive = false;
-            logIn.SetActive(false);
         }
         else
         {
@@ -51,6 +30,8 @@ public class UIActivator : MonoBehaviour
             menuActive = false;
         }
     }
+
+    //Used for toggling the login screen on and off
     public void LogInVar()
     {
         if (!logInActive)
@@ -58,6 +39,7 @@ public class UIActivator : MonoBehaviour
             logIn.SetActive(true);
             logInActive = true;
             menu.SetActive(false);
+            menuActive = false;
         }
         else
         {
@@ -65,44 +47,36 @@ public class UIActivator : MonoBehaviour
             logInActive = false;
 			menu.SetActive(true);
 			menuActive = true;
-			toMap.SetActive(false);
-			mapActive = false;
-			triviaActive = false;
-			trivia.SetActive(false);
-			aboutActive = false;
-			about.SetActive(false);
-			logInActive = false;
-			logIn.SetActive(false);
         }
     }
+
+    //Used for toggling About the Region on and off
     public void AboutVar()
     {
         if (!aboutActive)
         {
-            about.SetActive(true);
             aboutActive = true;
-            menu.SetActive(false);
+            about.SetActive(true);
         }
         else
         {
-            menu.SetActive(true);
             aboutActive = false;
-            about.SetActive(false); 
+            about.SetActive(false);
         }
     }
+
+    //Used for toggling Trivia on and off
     public void TriviaVar()
     {
         if (!triviaActive)
         {
             trivia.SetActive(true);
             triviaActive = true;
-            menu.SetActive(false);
         }
         else
         {
             trivia.SetActive(false);
             triviaActive = false;
-            menu.SetActive(true);
         }
     }
 }
