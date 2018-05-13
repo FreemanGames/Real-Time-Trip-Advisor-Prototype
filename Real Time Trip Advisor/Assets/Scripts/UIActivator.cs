@@ -20,29 +20,17 @@ public class UIActivator : MonoBehaviour
 
     public void LandMarks()
     {
-        if (!landmarksActive && !triviaActive && !aboutActive)
+        if (!landmarksActive)
         {
             landmarks.SetActive(true);
             landmarksActive = true;
         }
-        if (landmarksActive)
+        else if (landmarksActive)
         {
             landmarks.SetActive(false);
             landmarksActive = false;
             triviaActive = false;
             trivia.SetActive(false);
-            aboutActive = false;
-            trivia.SetActive(false);
-        }
-
-        if (triviaActive)
-        {
-            triviaActive = false;
-            trivia.SetActive(false);
-        }
-
-        if (aboutActive)
-        {
             aboutActive = false;
             trivia.SetActive(false);
         }
